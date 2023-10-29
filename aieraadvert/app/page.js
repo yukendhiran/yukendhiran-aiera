@@ -3,13 +3,13 @@ import Blob from "./component/blob/blob";
 export default function Home() {
   return (
     <div>
-      <div class="headline-container">
-        <div id="text-behind">AIERA ADVERT</div>
-        <div id="text-behind-blur">AIERA ADVERT</div>
-        <div id="text-front">AIERA ADVERT</div>
+      <div className="headline-container">
+        <div id="text-behind">AIERA </div>
+        <div id="text-behind-blur">AIERA </div>
+        <div id="text-front">AIERA </div>
       </div>
-      <div class="canvas-container">
-        <Blob id="canvas"></Blob>
+      <div className="canvas-container">
+        <Blob className="w-full h-full"></Blob>
       </div>
     </div>
   );

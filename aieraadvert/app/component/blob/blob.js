@@ -29,6 +29,7 @@ const Blob = () => {
       );
     }
   });
+
   return (
     <mesh
       ref={mesh}
@@ -46,7 +47,6 @@ const Blob = () => {
     </mesh>
   );
 };
-
 export default () => (
   <div className="container">
     <Canvas camera={{ position: [0.0, 0.0, 8.0] }}>
