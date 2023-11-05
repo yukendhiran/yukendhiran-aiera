@@ -29,21 +29,48 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 130vh;
-  width: 130vw;
+  height: 120vh;
+  width: 120vw;
   overflow: hidden;
   font-family: 'Major Mono Display', monospace;
+}
 
+@media screen and (max-width: 767px) and (max-height: 600px) {
+  .container {
+    height: 68vh;
+    width: 68vw;
+  }
+}
+@media screen and (max-width: 450px) and (max-height: 950px) {
+  .container {
+    height: 68vh;
+    width: 68vw;
+  }
 }
 
 .canvas-container {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: -7%;
+  left: -1%;
   z-index: 2;
-  
 }
+
+@media screen and (max-width: 767px) {
+  .canvas-container {
+   top: -1%;
+    left:15%;
+    transform: translate(-10%, -10%);
+  }
+}
+
+@media screen and (max-width: 450px) and (max-height: 950px) {
+  .canvas-container {
+   top: -1%;
+    left:15%;
+    transform: translate(-10%, -10%);
+  }
+}
+
 .neon:hover {
   text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
   color: #fff6a9;
@@ -51,8 +78,8 @@ body {
 
 .neon {
   text-shadow: none;
-  color: #ffff;
 }
+
 
 @keyframes neon {
   from {
@@ -112,57 +139,6 @@ body {
 
 /* Less relevant code */
 
-.more-content {
-  height: 500vh;
-  width: 100vw;
-}
 
-.text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  top: 5%;
-  height: 90%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  z-index: 3;
-}
 
-.title {
-  font-size: 0.5rem;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.3rem;
-  font-weight: 500;
-}
 
-.socials {
-}
-
-.socials svg {
-  margin: 0 5px;
-  transition: all 0.5s ease-in-out;
-  transform: scale(1);
-}
-
-.socials svg:hover {
-  transform: scale(1.2);
-  filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 1));
-}
-
-p {
-  width: 300px;
-  font-size: 0.75rem;
-}
-
-a {
-  color: rgba(255, 255, 255, 0.5);
-  text-decoration: none;
-  transition: all 0.5s ease-in-out;
-}
-
-a:hover {
-  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.9));
-}
