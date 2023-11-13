@@ -10,7 +10,7 @@ const Nav = () => {
 
   return (
    <>
-      <nav className='fixed flex  text-white w-5/6 top-8 bg-gray-500 mx-auto left-8 right-8 z-50 flex flex-wrap items-center justify-between bg-opacity-50 bg-blur-md backdrop-filter backdrop-blur-md py-4 px-6 rounded-lg shadow-lg '>
+      <nav className='fixed flex  text-white w-5/6 top-8  mx-auto left-8 right-8 z-50 flex-wrap items-center justify-between rounded-3xl  py-4 px-6 rounded-lg shadow-lg   bg-black  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100 '>
         <Link
   				href='/'
   				className='inline-flex items-center p-2 mr-4'
