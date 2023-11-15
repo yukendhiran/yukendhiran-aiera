@@ -3,7 +3,7 @@ import { FaTwitter, FaInstagram, FaFacebook } from 'react-icons/fa';
 import Link from 'next/link';
 function minifoot() {
   const [expanded, setExpanded] = useState(false);
-  
+   
 
   const toggleExpanded = () => {
     setExpanded(!expanded);
