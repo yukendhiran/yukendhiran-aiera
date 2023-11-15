@@ -2,6 +2,7 @@
 import Blob from "./component/blob/blob";
 import Nav from "./component/nav/nav";
 import Minifoot from "./component/footer/minifoot";
+import About from "./component/about/about";
 
 import { useScroll, motion, useTransform } from "framer-motion";
 
@@ -20,6 +21,7 @@ export default function Home() {
      <motion.div
       style={{y}} className="canvas-container">
         <Blob className="w-full h-full"></Blob>
+        <About/>
       </motion.div>
      
        <div className="headline-container">
