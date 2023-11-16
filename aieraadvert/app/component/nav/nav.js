@@ -34,7 +34,7 @@ const Nav = () => {
             active ? '' : 'hidden'
           }   w-full lg:inline-flex lg:flex-grow lg:w-auto lg:justify-end`}
         >
-          <div className=''>
+          <div className='text-center'>
             <a
              href='/'
              className='  px-3 py-2  text-white  items-center  text-lg   neon '>

@@ -8,26 +8,19 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+  <Tilt className='w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full w-[250px] bg-white green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+      className=' p-1 rounded-2xl shadow-card bg-gradient-to-br from-pink-500 to-green-500  bg-black  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100'
     >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-      >
-        {/*<img
+      <div className='bg-gray-900 rounded-2xl py-5 px-12 min-h-[280px] flex flex-col items-center'>
+        <img
           src={icon}
           alt='web-development'
           className='w-16 h-16 object-contain'
-        />*/}
+        />
 
-        <h3 className='text-white text-[20px] font-bold text-center'>
+        <h3 className='text-white text-2xl font-bold text-center'>
           {title}
         </h3>
       </div>
@@ -36,43 +29,42 @@ const ServiceCard = ({ index, title, icon }) => (
 );
 
 const About = () => {
-    const services = [
-        {
-          title: "Web Developer",
-          
-        },
-        {
-          title: "React Native Developer",
-         
-        },
-        {
-          title: "Backend Developer",
-          
-        },
-        {
-          title: "Content Creator",
-          
-        },
-      ];
+  const services = [
+    {
+      title: "Web Developement",
+    },
+    {
+      title: "Digital Marketing",
+    },
+    {
+      title: "SEO Optimization ",
+    },
+    {
+      title: "Content Creation",
+    },
+  ];
+
   return (
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <h2 className={styles.sectionHeadText}>We do</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        Welcome to our digital marketing company. 
+        We are experts in driving online success for 
+        businesses through customized strategies.
+        From SEO and social media to website optimization, 
+        we deliver measurable results. 
+        Let us help you achieve your digital marketing goals. 
+        Contact us now to get started.
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='grid mt-10 mr-10  mx-auto lg:grid-cols-4 gap-10 items-center justify-center'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
