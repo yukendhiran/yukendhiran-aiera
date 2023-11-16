@@ -18,30 +18,24 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-    className=" bg-black w-ful bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border rounded-lg border-gray-700">
+    className=" bg-black w-full bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border rounded-2xl border-gray-700">
   <Tilt
+     
     options={{
       max: 45,
       scale: 1,
       speed: 450,
     }}
-    className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full backdrop-filter backdrop-blur-lg bg-opacity-30"
+    className=" p-5 rounded-2xl  w-full backdrop-filter backdrop-blur-lg bg-opacity-30"
   >
     <div className="relative  h-[230px]">
       <img
         src={image}
         alt="project_image"
-        className="w-full h-full object-cover rounded-2xl"
+        className="w-full h-full rounded-2xl"
+        onClick={() => window.open(source_code_link, "_blank")}
       />
 
-      <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-        <div
-          onClick={() => window.open(source_code_link, "_blank")}
-          className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer backdrop-filter backdrop-blur-lg bg-opacity-50"
-        >
-          {/* Content of the div */}
-        </div>
-      </div>
     </div>
 
     <div className="mt-5">
@@ -68,20 +62,20 @@ const Works = () => {
 
     const projects = [
         {
-          name: "Car Rent",
+          name: "Work1",
           description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+            "detailed description of work 1", 
           tags: [
             {
-              name: "react",
+              name: "tag",
               color: "blue-text-gradient",
             },
             {
-              name: "mongodb",
+              name: "tag",
               color: "green-text-gradient",
             },
             {
-              name: "tailwind",
+              name: "tag",
               color: "pink-text-gradient",
             },
           ],
@@ -89,20 +83,20 @@ const Works = () => {
           source_code_link: "https://github.com/",
         },
         {
-          name: "Job IT",
+          name: "Work 2",
           description:
-            "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+            "detailed description of work 1", 
           tags: [
             {
-              name: "react",
+              name: "tag",
               color: "blue-text-gradient",
             },
             {
-              name: "restapi",
+              name: "tag",
               color: "green-text-gradient",
             },
             {
-              name: "scss",
+              name: "tag",
               color: "pink-text-gradient",
             },
           ],
@@ -110,24 +104,24 @@ const Works = () => {
           source_code_link: "https://github.com/",
         },
         {
-          name: "Trip Guide",
+          name: "Work 3",
           description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+            "detailed description of work 1", 
           tags: [
             {
-              name: "nextjs",
+              name: "tag",
               color: "blue-text-gradient",
             },
             {
-              name: "supabase",
+              name: "tag",
               color: "green-text-gradient",
             },
             {
-              name: "css",
+              name: "tag",
               color: "pink-text-gradient",
             },
           ],
-          image: "",
+          image: "" ,
           source_code_link: "https://github.com/",
         },
       ];
@@ -135,8 +129,8 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <p className={`${styles.sectionSubText} `}>Projects We Done.</p>
+        <h2 className={`${styles.sectionHeadText}`}>Our Work.</h2>
       </motion.div>
 
       <div className='w-full flex'>
@@ -144,15 +138,15 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          As a digital marketing company,
+          we pride ourselves on delivering efficient and effective results. 
+          Our portfolio showcases projects that demonstrate our expertise in driving tangible outcomes for clients. 
+          We use data-driven strategies, transparent reporting, and continuous optimization to maximize ROI. 
+          Let our track record of success speak for itself in showcasing the value we can bring to your organization.
         </motion.p>
       </div>
 
-      <div className='grid mt-10 space-x-10 mx-auto lg:grid-cols-3 gap-10 items-center justify-center'>
+      <div className='grid mt-10 mr-10 mx-auto lg:grid-cols-3 gap-10 items-center justify-center'>
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

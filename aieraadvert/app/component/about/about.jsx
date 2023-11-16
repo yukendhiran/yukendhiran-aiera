@@ -1,7 +1,7 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
-
+import { Typewriter } from 'react-simple-typewriter'
 import { styles } from "../../styles";
 
 import { SectionWrapper } from "../hoc";
@@ -11,7 +11,7 @@ const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className=' p-1 rounded-2xl shadow-card bg-gradient-to-br from-pink-500 to-green-500  bg-black  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100'
+      className=' p-1 rounded-2xl shadow-card bg-gradient-to-br from-pink-500 to-green-500 '
     >
       <div className='bg-gray-900 rounded-2xl py-5 px-12 min-h-[280px] flex flex-col items-center'>
         <img
@@ -37,7 +37,7 @@ const About = () => {
       title: "Digital Marketing",
     },
     {
-      title: "SEO Optimization ",
+      title: "SEO Optimization",
     },
     {
       title: "Content Creation",
@@ -48,7 +48,21 @@ const About = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>We do</h2>
+        <h2 className={styles.sectionHeadText}>We do {" "}
+         <span style={{ color: 'yellow', fontWeight: 'bold' }}>
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={['Web Developement', 'Digital Marketing', 'SEO Optimization', 'Content Creation']}
+            loop={5}
+            cursor
+            cursorStyle='|'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+           
+          />
+          </span>
+          </h2>
       </motion.div>
 
       <motion.p
