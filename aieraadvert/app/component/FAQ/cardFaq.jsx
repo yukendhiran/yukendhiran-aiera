@@ -19,7 +19,7 @@ function CardFaq({ question, answer }) {
 
   return (
     <motion.div
-      className={`w-11/12 rounded-2xl p-3 my-auto  ${
+      className={`w-9/12  rounded-2xl p-3 my-auto  ${
         expanded ? ' bg-yellow-500 ' : 'bg-opacity-10 backdrop-blur-sm border border-gray-100 bg-clip-padding backdrop-filter'
       } mx-auto ${
         expanded ? 'h-auto' : 'h-12'
@@ -27,7 +27,7 @@ function CardFaq({ question, answer }) {
      
     >
       <motion.div
-        className={`h-auto text-[20px] font-bold ${
+        className={`h-auto sm:text-[15px] lg:text-[20px] font-bold ${
           expanded ? 'text-black' : 'text-yellow-500'
         }`}
         transition={transition}
@@ -39,7 +39,7 @@ function CardFaq({ question, answer }) {
         <motion.div  variants={variants}
         initial='hidden'
         animate={expanded ? 'show' : 'hidden'}
-        className="h-auto p-5 text-[17px] font-bold text-black">{answer}</motion.div>
+        className="h-auto p-5 sm:text-[12px] lg:text-[17px] font-bold text-black">{answer}</motion.div>
       )}
     </motion.div>
   );

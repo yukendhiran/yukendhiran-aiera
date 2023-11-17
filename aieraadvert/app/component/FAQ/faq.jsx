@@ -6,7 +6,7 @@ const FaqSection = () => {
     return (
      <>
      <h2 className={`${styles.sectionHeadText}`}>FAQ.</h2>
-      <div className='mr-14 flex flex-col space-y-5 mt-10'>
+      <div className=' grid mt-10    sm:mr-24 lg:mr-0 grid-cols-1 gap-10 items-center justify-center'>
       
       <CardFaq
         question="What is AIERA?"

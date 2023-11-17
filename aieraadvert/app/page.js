@@ -8,6 +8,8 @@ import Testimonial from "./component/testimonials/testimonial";
 import Faq from "./component/FAQ/faq";
 import Contact from "./component/Contact/contact";
 import Stars from "./component/Contact/stars";
+import { Suspense } from "react";
+import Loading from "./component/Contact/loader";
 
 import { useScroll, motion, useTransform } from "framer-motion";
 
@@ -20,18 +22,21 @@ export default function Home() {
 
 
   return (
-    <div className=""> 
+    <> 
+    <Suspense fallback={<Loading />}>
 
-      <Nav/>
+    <Nav/>
      <motion.div
       style={{y}} className="canvas-container">
         <Blob className="w-full h-full"></Blob>
-        <About/>
-        <Work/>
-        <Testimonial/>
-        <Faq/>
+        <About/><div className="mb-12"/>
+        <Work/><div className="mb-12"/>
+        <Testimonial/><div className="mb-12"/>
+        <Faq/><div className="mb-12"/>
         <Contact/>
+        <div className="mb-12"/>
         <Stars/>
+
       </motion.div>
      
        <motion.div className="headline-container">
@@ -41,7 +46,10 @@ export default function Home() {
       </motion.div>
 
       <Minifoot/>
-     </div>
+    </Suspense>
+
+      
+     </>
     
   );
 }

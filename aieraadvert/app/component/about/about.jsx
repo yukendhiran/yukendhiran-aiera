@@ -8,7 +8,7 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='w-full'>
+  <Tilt className='sm:w-9/12 lg:w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className=' p-1 rounded-2xl shadow-card bg-gradient-to-br from-yellow-500 to-red-500 '
@@ -78,7 +78,7 @@ const About = () => {
         Contact us now to get started.
       </motion.p>
 
-      <div className='grid mt-10 mr-10  mx-auto lg:grid-cols-4 gap-10 items-center justify-center'>
+      <div className='grid mt-10    lg:grid-cols-4 gap-10 items-center justify-center'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

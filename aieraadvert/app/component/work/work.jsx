@@ -18,7 +18,7 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-    className=" bg-black w-full bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border rounded-2xl border-gray-700">
+    className=" bg-black  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border rounded-2xl border-gray-700">
   <Tilt
      
     options={{
@@ -26,7 +26,7 @@ const ProjectCard = ({
       scale: 1,
       speed: 450,
     }}
-    className=" p-5 rounded-2xl  w-full backdrop-filter backdrop-blur-lg bg-opacity-30"
+    className="p-5 rounded-2xl  backdrop-filter backdrop-blur-lg bg-opacity-30"
   >
     <div className="relative  h-[230px]">
       <img
@@ -146,7 +146,7 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className='grid mt-10 mr-10 mx-auto lg:grid-cols-3 gap-10 items-center justify-center'>
+      <div className='grid mt-10 sm:mr-24 lg:mr-0 lg:grid-cols-3 gap-10 items-center justify-center'>
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
