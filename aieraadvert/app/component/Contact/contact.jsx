@@ -25,7 +25,7 @@ const Contact = () => {
 
   return (
       <>
-       <h2 className={`${styles.sectionHeadText}`}>Our Work.</h2>
+       <h2 className={`${styles.sectionHeadText}`}>Contact.</h2>
     <div
       className={`xl:mt-12 flex xl:flex-row  w-full flex-col-reverse gap-10 overflow-hidden`}
     > 

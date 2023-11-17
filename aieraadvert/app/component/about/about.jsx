@@ -48,13 +48,12 @@ const About = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>We do {" "}
+        <h2 className={`${styles.sectionHeadText} sm:p-3 sm:mr-12 lg:p-0 lg:mr-0`}>We do {" "}
          <span style={{ color: 'yellow', fontWeight: 'bold' }}>
           {/* Style will be inherited from the parent element */}
           <Typewriter
             words={['Web Developement', 'Digital Marketing', 'SEO Optimization', 'Content Creation']}
             loop={5}
-            cursor
             cursorStyle='|'
             typeSpeed={70}
             deleteSpeed={50}
@@ -67,7 +66,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className='mt-4 sm:p-5 lg:p-2 sm:mr-24 lg:mr-0 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
         Welcome to our digital marketing company. 
         We are experts in driving online success for 

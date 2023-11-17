@@ -21,12 +21,12 @@ function minifoot() {
           </div>
 
           {expanded && (
-            <div className='fixed bottom-16 right-4 z-10 bg-white py-2 px-4 rounded-lg shadow'>
+            <div className='fixed bottom-16 right-4 z-10 bg-white  bg-opacity-10 rounded-md  backdrop-blur-sm  absolute border py-2 px-4 rounded-lg shadow'>
               <div className='mb-2'>
-                <Link href='mailto:info@aieraadvert.com' className='text-blue-500'>info@aieraadvert.com</Link>
+                <Link href='mailto:info@aieraadvert.com' className='text-white text-bold text-lg'>info@aieraadvert.com</Link>
               </div>
               <div>
-                <Link href='tel:+918220967296' className='text-blue-500'>+918220967296</Link>
+                <Link href='tel:+918220967296' className='text-white text-bold text-lg'>+918220967296</Link>
               </div>
             </div>
           )}

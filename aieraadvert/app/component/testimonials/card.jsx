@@ -36,9 +36,9 @@ const TestimonialCard = ({ index }) => {
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileHover={!isSmallScreen ? { opacity: 1, y: 0 } : {}}
-            className='lg:h-[100px]  lg:w-[200px] lg:left-32 lg:-top-5 font-bold text-white text-[20px] text-center  p-7 z-20  bg-opacity-5 rounded-md  backdrop-blur-sm absolute border border-gray-100 sm:h-[50px] sm:w-[100px] sm:left-28 sm:-top-5 sm:text-[16px] sm:p-5'
+            className='lg:h-[100px]  lg:w-[200px] lg:left-32 lg:-top-5 font-bold text-white text-[25px] text-center  p-7 z-20  bg-opacity-5 rounded-md  backdrop-blur-sm absolute border border-gray-100 sm:h-[50px] sm:w-[100px] sm:left-28 sm:-top-5 sm:text-[25px] sm:p-5'
           >
-            <span >Name </span>            
+            <span className="top-5 right-5" >Name </span>            
           </motion.div>
         </div>
       </motion.div>
