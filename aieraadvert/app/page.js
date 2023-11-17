@@ -6,6 +6,8 @@ import About from "./component/about/about";
 import Work from "./component/work/work";
 import Testimonial from "./component/testimonials/testimonial";
 import Faq from "./component/FAQ/faq";
+import Contact from "./component/Contact/contact";
+import Stars from "./component/Contact/stars";
 
 import { useScroll, motion, useTransform } from "framer-motion";
 
@@ -18,7 +20,7 @@ export default function Home() {
 
 
   return (
-    <div className="bg-black"> 
+    <div className=""> 
 
       <Nav/>
      <motion.div
@@ -26,8 +28,10 @@ export default function Home() {
         <Blob className="w-full h-full"></Blob>
         <About/>
         <Work/>
-       <Testimonial/>
-       <Faq/>
+        <Testimonial/>
+        <Faq/>
+        <Contact/>
+        <Stars/>
       </motion.div>
      
        <motion.div className="headline-container">

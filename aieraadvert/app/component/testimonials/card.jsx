@@ -5,8 +5,8 @@ import { fadeIn } from "../../utils/motion";
 import { SectionWrapper } from "../hoc";
 import Image from 'next/image';
 
-const ServiceCard = ({ index, title, icon }) => {
-  const isSmallScreen = window.innerWidth <= 640;
+const TestimonialCard = ({ index }) => {
+  const isSmallScreen = typeof window !== "undefined" && window.innerWidth <= 767.98
   return (
     <Tilt className=''>
       <motion.div
@@ -47,4 +47,4 @@ const ServiceCard = ({ index, title, icon }) => {
 };
 
 
-export default SectionWrapper(ServiceCard, "service");
+export default SectionWrapper(TestimonialCard, "testimonial");
