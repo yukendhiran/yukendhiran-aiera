@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -19,6 +20,8 @@ const Nav = () => {
     				AIERA
   				</span>
 			</Link>
+      <div className='text-center text-2xl text-white ' > (WIP) "Site under construction - analyzing requirements" </div>
+
         <button
           className= "inline-flex p-3  rounded lg:hidden text-white ml-auto  outline-none"
           onClick={handleClick}

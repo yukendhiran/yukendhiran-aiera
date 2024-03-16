@@ -1,3 +1,4 @@
+"use client"
 import { SectionWrapper } from '../hoc'
 import CardFaq from './cardFaq';
 import { styles } from '@/app/styles';
